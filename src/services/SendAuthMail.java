@@ -21,12 +21,21 @@ public class SendAuthMail {
 		int verificationNumber = genAuth.randomNumber();
 		try {
 			 String host ="smtp.gmail.com" ;
+<<<<<<< HEAD
 	         String user = "<CLEARED>";
 	         String pass = "<CLEARED>";
 	         String to = userToConfirm.getUserEmail();
 	         String from = "<CLEARED>";
 	         String subject = "<CLEARED>";
 	         String messageText = "Aby aktywowa� konto, prosz� skopiowa� numer i wklei� go na stronie weryfikacyjnej: " + verificationNumber;
+=======
+	         String user = "CLEARED";
+	         String pass = "CLEARED";
+	         String to = userToConfirm.getUserEmail();
+	         String from = "CLEARED";
+	         String subject = "FoodTruckFinder mail weryfikacyjny";
+	         String messageText = "Aby aktywowaæ konto, proszê skopiowaæ numer i wkleiæ go na stronie weryfikacyjnej: " + verificationNumber;
+>>>>>>> f848c6c617d019b749a7f48ad4480c9aa8725131
 	         boolean sessionDebug = false;
 	         
 	         Properties props = System.getProperties();
