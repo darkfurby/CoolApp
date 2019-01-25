@@ -24,7 +24,7 @@ public class RegisterServlet extends HttpServlet {
         
     }
 
-
+//servlet rejestrujacy uzytkownika
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		UserDao userDao = new UserDao();
 		ReqisterMethods registerMethods = new ReqisterMethods();

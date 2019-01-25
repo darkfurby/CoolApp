@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>FoodTruckFinder2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>register_page.jsp</welcome-file>
+  </welcome-file-list>
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>dostep do panelu admina</web-resource-name>
+      <url-pattern>/admin_page.jsp</url-pattern>
+      <http-method>GET</http-method>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>1</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>dostep do glownej strony</web-resource-name>
+      <url-pattern>/main_page.jsp</url-pattern>
+      <url-pattern>/about_me.jsp</url-pattern>
+      <url-pattern>/test_conn.jsp</url-pattern>
+      <url-pattern>/confirm_user_page.jsp</url-pattern>
+      <http-method>GET</http-method>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>1</role-name>
+      <role-name>2</role-name>
+      <role-name>3</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <login-config>
+    <auth-method>FORM</auth-method>
+    <form-login-config>
+      <form-login-page>/login_page.jsp</form-login-page>
+      <form-error-page>/error_page.jsp</form-error-page>
+    </form-login-config>
+  </login-config>
+  <filter>
+    <filter-name>MainPageFilter</filter-name>
+    <filter-class>filters.MainPageFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>MainPageFilter</filter-name>
+    <url-pattern>/main_page.jsp</url-pattern>
+  </filter-mapping>
+</web-app>

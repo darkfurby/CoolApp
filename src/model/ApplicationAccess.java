@@ -1,5 +1,5 @@
 package model;
-
+//odpowiednik na bazie "application_access"
 public class ApplicationAccess {
 
 	private int accessId;

@@ -1,5 +1,5 @@
 package model;
-
+//javaBeans odpowiednik tabeli na bazie "user_email_confirm"
 public class EmailConfirm {
 	private int userId;
 	public int getUserId() {
